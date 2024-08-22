@@ -1,5 +1,6 @@
 package com.mosso.testglobal.core.presentation.di
 
+import com.mosso.testglobal.BuildConfig
 import com.mosso.testglobal.core.data.ApiServiceFactory
 import com.mosso.testglobal.core.domain.ServiceFactory
 import dagger.Module
@@ -37,7 +38,7 @@ object CoreModule {
                     chain.request().newBuilder()
                         .addHeader(
                             "Authorization",
-                            "Bearer"
+                            "Bearer ${BuildConfig.MY_ACCESS_API_KEY}"
                         )
                         .build()
                 chain.proceed(request)
