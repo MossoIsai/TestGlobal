@@ -5,6 +5,7 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.mosso.testglobal.core.presentation.ui.handlerErrorMessage
 import com.mosso.testglobal.movies.presentation.components.Movie
 import com.mosso.testglobal.movies.presentation.components.MySnackBar
 import com.mosso.testglobal.movies.presentation.state.MovieUIState
@@ -17,9 +18,8 @@ fun MovieListScreen(
 ) {
     when (uiState) {
         is MovieUIState.Error -> {
-            MySnackBar(errorMessage = uiState.throwable.localizedMessage)
+            MySnackBar(errorMessage = uiState.throwable.handlerErrorMessage())
         }
-
         MovieUIState.Loading -> ""
         is MovieUIState.Success -> {
             val moviesList = uiState.moviesList ?: arrayListOf()

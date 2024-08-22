@@ -37,6 +37,6 @@ fun MySnackBar(errorMessage: String) {
                 }
             )
         }
-    ) { contentPadding -> // show content
+    ) { contentPadding ->
     }
 }
