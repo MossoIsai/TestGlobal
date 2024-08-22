@@ -37,7 +37,7 @@ object CoreModule {
                     chain.request().newBuilder()
                         .addHeader(
                             "Authorization",
-                            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNDNjNWJhMTJiOTU2YWE0YzMxNDc0MTViN2NjMGMyYSIsInN1YiI6IjVlMTkxNjhlMmVhNmI5MDAxM2VmNGQzNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.vLoNzWaHKssRMkt85NR34dvmTJeQYIq3lBpUBjbrL-4"
+                            "Bearer"
                         )
                         .build()
                 chain.proceed(request)
